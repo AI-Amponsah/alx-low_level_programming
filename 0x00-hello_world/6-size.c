@@ -9,8 +9,8 @@
 int main(void)
 {
 	char acharacter;
-	int aninteger;
-	long  along;
+	int ainteger;
+	long along;
 	long long alonglong;
 	float afloat;
 
