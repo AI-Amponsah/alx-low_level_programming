@@ -10,8 +10,8 @@ int main(void)
 {
 	char acharacter;
 	int aninteger;
-	long int along;
-	long long int alonglong;
+	long  along;
+	long long alonglong;
 	float afloat;
 
 	printf("Size of a char: %lu byte(s)\n", sizeof(acharacter));
