@@ -1,22 +1,21 @@
 #include "main.h"
 
 /**
-  *  print_last_digit - prints last digit
-  * Return: Last digit
-  * @j: number
-  * @n: Arguement
-  */
-
-int print_last_digit(int n)
+ * print_last_digit - checks number
+ * @j: arguenent.
+ *@i: variable
+ * Return: i
+ */
+int print_last_digit(int j)
 {
-	int j;
+	int i;
 
-	if (n < 0)
-		n = -n;
+	i = j % 10;
 
-	j = n % 10;
-	_putchar(j + '0');
-
-	return (j);
-
+	if (i < 0)
+	{
+		i *= -1;
+	}
+	_putchar(i + '0');
+	return (i);
 }
