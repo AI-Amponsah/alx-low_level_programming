@@ -3,12 +3,18 @@
 /**
   *  print_last_digit - prints last digit
   * Return: Last digit
-  *@j: number
+  * @j: number
+  * @n: Arguement
   */
 
-int print_last_digit(int j)
+int print_last_digit(int n)
 {
-	j = j % 10;
+	int j;
+
+	if (n < 0)
+		n = -n;
+
+	j = n % 10;
 
 	return (j);
 
