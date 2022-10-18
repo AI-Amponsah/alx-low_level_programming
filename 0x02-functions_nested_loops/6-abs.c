@@ -9,7 +9,9 @@
 int _abs(int i)
 {
 
-	if ((i < '0') || (i == '0') || (i > '0'))
-		_putchar(i);
-	return (0);
+	if (i >= 0)
+		return (i);
+	else
+		return (-i);
+
 }
