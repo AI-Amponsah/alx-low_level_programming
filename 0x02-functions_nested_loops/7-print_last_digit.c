@@ -6,8 +6,10 @@
  *@i: variable
  * Return: i
  */
-int print_last_digit(int j, int i)
+int print_last_digit(int j)
+
 {
+	int i;
 
 	i = j % 10;
 
