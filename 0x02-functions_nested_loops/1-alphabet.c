@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
-  * void print_alphabet(void) - This prints out the alphabets 
-  *
-  *Return: Always zero
- */
+  * print_alphabet - Prints lowercase alphabets
+  * Return: No return value
+  */
 
 void print_alphabet(void)
 {
@@ -13,6 +12,4 @@ void print_alphabet(void)
 	for (c = 'a'; c <= 'z'; c++)
 		_putchar(c);
 	_putchar('\n');
-
-	return (0);
 }
