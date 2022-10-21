@@ -1,23 +1,22 @@
 #include "main.h"
-
 /**
-  *print_line - Prints a line
-  *@n: arguement
-  *Return: void
+  * print_line - function that prints a straight line
+  * @n: takes in an integer
   */
-
 void print_line(int n)
 {
 	int i;
 
-	for (i = 1; i <= n; i++)
+	for (i = 0; i < n; i++)
 	{
-		_putchar('-');
-		if (n <= 0)
+		if (n > 0)
+		{
+			_putchar('_');
+		}
+		else
 		{
 			_putchar('\n');
 		}
-
 	}
 	_putchar('\n');
 }

@@ -1,30 +1,18 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
-  * print_square - Printing a square
-  * @size: Function Arguement
-  *Return: void
+  * print_square - function to print a square
+  * @size: takes in the size of the square
   */
-
 void print_square(int size)
 {
-	int i, k;
+	int i, j;
 
-	for (i = 1; i <= size; i++)
+	if (size <= 0)
+		_putchar('\n');
+	for (i = 0; i < size; i++)
 	{
-		for (k = 1; k <= size; k++)
-		{
-			if (size <= 0)
-			{
-				_putchar('\n');
-			}
-			else
-			{
-				_putchar('#');
-			}
-		}
-		 _putchar('\n');
+		for (j = 0; j < size; j++)
+			_putchar('#');
+		_putchar('\n');
 	}
-	_putchar('\n');
-
 }
