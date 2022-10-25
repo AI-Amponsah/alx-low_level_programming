@@ -10,9 +10,9 @@
 void puts_half(char *str)
 {
 
-	long unsigned int i;
+	unsigned int i;
 
-	for (i = 0; i <= strlen(str); i++)
+	for (i = 1; i <= strlen(str); i++)
 	{
 		if ((i != '\0') && (i >= 5) && (i <= 9))
 			_putchar(str[i]);
