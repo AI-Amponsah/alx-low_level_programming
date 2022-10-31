@@ -1,23 +1,30 @@
-#include "main.h"
-#include <string.h>
+#include "holberton.h"
 
 /**
-  * *_strncat - String concatenation
-  *@dest: Pointer arguement
-  *@src: Pointer arguement
-  *@n: byte
-  * Return: String
-  */
-
+*_strncat - Funtion
+*
+*@dest: Destiny
+*@src: Source
+*@n: Variable
+*Return: Destiny
+*/
+/**------------------Hello------World--1||1024*/
 char *_strncat(char *dest, char *src, int n)
 {
+	int i = 0;
+	int r = 0;
+	int tam = 0;
 
-	char *str = dest + strlen(dest);
-
-	while (*src != '\0' && n--)
+	for (; dest[tam];)
 	{
-		*str++ = *src++;
+		tam++;
+	}
 
+	while (r < n && src[r])
+	{
+		dest[tam + i] = src[r];
+		i++;
+		r++;
 	}
 	return (dest);
 }

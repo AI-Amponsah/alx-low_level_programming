@@ -1,22 +1,24 @@
-#include "main.h"
-#include <string.h>
-
+#include "holberton.h"
 /**
-  * _strncpy - Copies a string
-  * @dest: Destination pointer
-  * @src: Source pointer
-  * @n: byte
-  *Return: Char string
-  */
-
+* *_strncpy - check the code for Holberton School students.
+* @dest : int
+* @src : int
+* @n : int
+* Return: Always 0.
+*/
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *str = dest + strlen(dest);
+	int i = 0;
 
-	while (*src != '\0' && n--)
+	while (i < n && src[i] != '\0')
 	{
-		*str++ = *src++;
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
 	}
 	return (dest);
-
 }
