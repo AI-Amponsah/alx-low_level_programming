@@ -16,8 +16,7 @@ unsigned int i;
 
 for (i = 0; i < n; i++)
 {
-*s = b;
-s++;
+s[i] = b;
 }
 *s = '\0';
 return (s);
