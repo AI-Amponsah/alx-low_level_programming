@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
 *_memset - fills a block of memory with a character of n bytes
@@ -12,13 +13,13 @@
 char *_memset(char *s, char b, unsigned int n)
 {
 unsigned int i;
-
+char *ptr = s + strlen(s);
 
 for (i = 0; i < n; )
 {
-*s = b;
+*ptr = b;
 i++;
-s++;
+ptr++;
 }
-return (s);
+return (ptr);
 }
