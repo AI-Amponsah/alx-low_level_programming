@@ -21,5 +21,6 @@ for (i = 0; i < n; )
 i++;
 ptr++;
 }
+*ptr = '\0';
 return (ptr);
 }
