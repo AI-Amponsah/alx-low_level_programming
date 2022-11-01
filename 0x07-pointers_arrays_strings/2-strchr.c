@@ -19,5 +19,5 @@ return (s + 2);
 }
 
 }
-return (NULL);
+return (!c ? s : NULL);
 }
