@@ -43,5 +43,5 @@ if (n < 0)
 return (-1);
 if (n == 0 || n == 1)
 return (n);
-return (square(2, n, n));
+return (square(0, n, n));
 }
