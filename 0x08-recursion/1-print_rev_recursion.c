@@ -2,7 +2,7 @@
 
 
 /**
-* _puts_recursion - prints reverse of a string
+*_print_rev_recursion - prints reverse of a string
 * @s: pointer arguement
 "* Return: void
 */
