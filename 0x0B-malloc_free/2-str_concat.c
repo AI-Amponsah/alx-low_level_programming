@@ -27,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 
 	if (!array)
 	{
-		return (NULL); /
+		return (NULL); 
 	}
 	for (i = 0; i < size; i++)
 	{
