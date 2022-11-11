@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * _strcmp - writes the character c to stdout
  * @s1: The character to print
