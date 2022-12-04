@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
-*binary_to_unit - converts binary to decimal
+*binary_to_uint - converts binary to decimal
 *@b: constant  char pointer
 *
 *Return: unsigned int value
