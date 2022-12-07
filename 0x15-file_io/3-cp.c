@@ -1,6 +1,24 @@
 #include "main.h"
 
-
+/**
+  *eror - prints error message
+  *@message:  file
+  *@exit_code: exit code
+  *Return: void
+  */
+void eror(char *message, int exit_code)
+{
+	if (exit_code == 98)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		exit(98);
+	}
+	if (exit_code == 99)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", file_to);
+		exit(99);
+	}
+}
 
 /**
  * cp - copies a file to another file
@@ -17,14 +35,12 @@ void cp(char *file_from, char *file_to)
 	fd1 = open(file_from, O_RDONLY);
 	if (fd1 < 0)
 	{
-		exit(98);
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		eror(file_from, 98);
 	}
 	fd2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd2 < 0)
 	{
-		exit(99);
-		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", file_to);
+		eror(file_to, 99);
 	}
 	read1 = 1024;
 	while (read1 == 1024)
@@ -32,14 +48,12 @@ void cp(char *file_from, char *file_to)
 		read1 = read(fd1, buf, 1024);
 		if (read1 < 0)
 		{
-			exit(98);
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+			eror(file_from, 98);
 		}
 		write1 = write(fd2, buf, read1);
 		if (write1 < 0)
 		{
-			exit(99);
-			dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", file_to);
+			eror(file_from, 99);
 		}
 	}
 	close_val = close(fd1);
