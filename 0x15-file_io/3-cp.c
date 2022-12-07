@@ -10,12 +10,12 @@ void eror(char *message, int exit_code)
 {
 	if (exit_code == 98)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", message);
 		exit(98);
 	}
 	if (exit_code == 99)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", message);
 		exit(99);
 	}
 }
