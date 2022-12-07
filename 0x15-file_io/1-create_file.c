@@ -1,36 +1,33 @@
 #include "main.h"
 
 /**
- * create_file - creates a file with a text
- *
- * @filename: file.
- * @text_content: contents to be written in file.
- * Return: Actual number of contents in file.
+ * create_file - Creates a file.
+ * standard output.
+ * @filename: Name of the file to create.
+ * @text_content: NULL terminated string to write to the file.
+ * Return: 1 on success, -1 on failure.
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, i, w;
+	int fd, lenght;
+	ssize_t res_write;
 
 	if (filename == NULL)
-	{
 		return (-1);
-	}
-	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	if ((fd) == -1)
-	{
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	if (fd == -1)
 		return (-1);
-	}
-	if (text_content == NULL)
+	if (text_content != NULL)
 	{
-		text_content = "";
-	}
-	for (i = 0; text_content[i]; i++)
-	{
-		w = write(fd, text_content, i);
-	}
-	if ((w) == -1)
-	{
-		return (-1);
+		lenght = 0;
+		while (*(text_content + lenght) != '\0')
+			lenght++;
+		res_write = write(fd, text_content, lenght);
+		if (res_write == -1)
+		{
+			write(1, "fails", 6);
+			return (-1);
+		}
 	}
 	close(fd);
 	return (1);
